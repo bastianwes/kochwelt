@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="headerSection">
+            <img onclick="window.location.href='index.html'" src="img/logo.png" width="200px" style="cursor: pointer;">
+            <div class="navBar">
+                <a href="index.html">Start</a>
+                <a href="index_menu.html">Rezept des Tages</a>
+                <a href="index_impressum.html">Impressum</a>
+                <a href="index_mail.html" style="color: rgb(13, 102, 13);">Kontakt</a>
+            </div>
+        </div>
+    </header>
+    <div class="contact">
+        <h2>Kontakt</h2>
+        <p>
+            Willkommen auf unserer Kontaktseite! Wir freuen uns über deine Fragen, Anregungen oder Rückmeldungen.
+            Dein
+            Feedback ist
+            uns wichtig, da es uns dabei hilft, unsere Dienstleistungen zu verbessern und sicherzustellen, dass wir
+            die
+            Bedürfnisse
+            unserer Besucher erfüllen.<br><br>
+
+            <b>Wie kannst du uns kontaktieren?</b><br><br>
+            Du kannst uns über das unten stehende Kontaktformular erreichen. Bitte fülle die erforderlichen Felder
+            aus
+            und teile uns
+            so viele Details wie möglich mit, damit wir dir bestmöglich weiterhelfen können.
+        </p>
+    </div>
+    <form onsubmit="sendMail(event)">
+        <label>
+            Deine E-Mail:
+            <input type="email" name="email">
+        </label>
+        <label>
+            Deine Nachricht:
+            <textarea name="message"></textarea>
+        </label>
+        <button type="submit">Senden</button>
+    </form>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Die Nachricht wurde erfolgreich gesendet.</p>
+        </div>
+    </div>
+    <footer>
+        <a href="index_mail.html">Kontakt</a>
+        <a href="index_impressum.html">Impressum</a>
+        <a href="index_datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
+
+</html>
