@@ -33,4 +33,3 @@ function sendMail(event) {
   openPopup();
 }
 
-// JAVASCRIPT FUNKTION FÜR PORTIONEN FEHLT
