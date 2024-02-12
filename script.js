@@ -33,3 +33,20 @@ function sendMail(event) {
   openPopup();
 }
 
+function adjustPortions() {
+  let previousValue = parseFloat(document.getElementById("previousServing").value);
+  let newValue = parseFloat(document.getElementById("portionInput").value);
+  if (previousValue && newValue) {
+    let quantityElements = document.querySelectorAll('.t-left span');
+    quantityElements.forEach(function (element) {
+      let content = element.textContent.trim();
+      let numberPart = parseFloat(content);
+      if (!isNaN(numberPart)) {
+        let unitPart = content.replace(numberPart, '').trim();
+        let newNumber = numberPart * newValue / previousValue;
+        element.textContent = newNumber + " " + unitPart;
+      }
+    });
+    document.getElementById("previousServing").value = newValue;
+  }
+}
