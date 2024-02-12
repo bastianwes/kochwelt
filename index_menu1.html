@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="1rezept.css">
 </head>
 
 <body>
@@ -25,7 +32,125 @@
     </header>
 
     <!-- // REZEPT HIER EINFÜGEN // -->
+    <section id="main-content" class="index">
+        <section id="rezept">
+            <h1>Caesar Salad</h1>
+            <div class="header-rezept">
+                <img src="img/salatimg.jpg" alt="caesar salad img">
+            </div>
+            <div class="rezept-icon">
+                <div id="duration">
+                    <img src="img/clock-regular.svg">
+                    <span>10 min.</span>
+                </div>
+                <div id="difficulty">
+                    <img src="img/brain-solid.svg">
+                    <span>normal</span>
+                </div>
+                <div id="post-date">
+                    <img src="img/calendar-alt-regular.svg">
+                    <span>07.02.2024</span>
+                </div>
+            </div>
 
+            <input type="hidden" id="previousServing" value="4">
+            <div class="portion">
+                <label for="portion">Zutaten für</label>
+                <input id="portionInput" type="number" value="4" min="1" max="30">
+                <button class="buttons" onclick="adjustPortions()">Portionen</button>
+            </div>
+            <div id="zutaten">
+                <p class="fatty">Zutaten</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat1">1 Römersalat(e)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>50 g Parmesan,frisch gerieben</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat2">3 Scheibe/n Toastbrot</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>Öl zum Braten</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat3">1 Knoblauchzehe(n)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>1 Ei(er), roh</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat4">2 Sardellenfilet(s) aus dem
+                                    Glas</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>2TL Dijonsenf</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat5">4,09 ml Zitrone(n), Saft davon</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>150ml Keimöl o. Ä. - kein Olivenöl!</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat6">Pfeffer aus der Mühle</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="fatty">Zubereitung</p>
+                <div id="zubereitung">
+                    <span>Den Römersalat waschen, trocken schleudern und in mundgerechte Stücke schneiden. In einer
+                        Schüssel anrichten.
+
+                        Für die Sauce die gesamten Zutaten bis auf das Öl in einen hohen Becher geben und mit dem
+                        Pürierstab aufschlagen, dann das Öl langsam unter ständigem Weiterschlagen einlaufen lassen,
+                        bis
+                        eine cremige Sauce entstanden ist.
+
+                        Das Toastbrot entrinden, in kleine Würfel schneiden und in heißem Öl mit Knoblauch rundum zu
+                        krossen Croûtons braten.
+
+                        Die Sauce über den Salat geben, alles gut vermischen und den Salat mit reichlich geriebenem
+                        Parmesankäse und den Croûtons bestreut servieren.
+
+                        Mit kross gebratenem Hähnchenfilet wird dies eine leichte Hauptspeise.</span>
+                </div>
+            </div>
+            <div class="author">
+                <p class="fatty">Rezept erstellt von</p>
+                <div id="profil">
+                    <img class="profilimg" src="img/profile.png">
+                    <p id="author">Elias Schäfer</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <br>
+    <br>
     <footer>
         <a href="index_mail.html">Kontakt</a>
         <a href="index_impressum.html">Impressum</a>
