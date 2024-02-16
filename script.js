@@ -36,6 +36,13 @@ function sendMail(event) {
 function adjustPortions() {
   let previousValue = parseFloat(document.getElementById("previousServing").value);
   let newValue = parseFloat(document.getElementById("portionInput").value);
+
+  // Überprüfen, ob newValue im zulässigen Bereich liegt
+  if (isNaN(newValue) || newValue < 1 || newValue > 30) {
+    alert("Bitte geben Sie eine gültige Anzahl zwischen 1 und 30 ein.");
+    return;
+  }
+
   if (previousValue && newValue) {
     let quantityElements = document.querySelectorAll('.t-left span');
     quantityElements.forEach(function (element) {
@@ -43,7 +50,7 @@ function adjustPortions() {
       let numberPart = parseFloat(content);
       if (!isNaN(numberPart)) {
         let unitPart = content.replace(numberPart, '').trim();
-        let newNumber = numberPart * newValue / previousValue;
+        let newNumber = numberPart * (newValue / previousValue);
         element.textContent = newNumber + " " + unitPart;
       }
     });
