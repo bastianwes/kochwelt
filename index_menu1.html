@@ -7,31 +7,29 @@
     <title>Kochwelt</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="1rezept.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="1rezept.css">
 </head>
 
 <body>
     <header>
         <div class="headerSection">
-            <img onclick="window.location.href='index.html'" src="img/logo.png" width="200px" style="cursor: pointer;">
+            <img onclick="window.location.href='index.html'" src="img/logo.png" style="cursor: pointer;" width="200px">
             <div class="navBar">
-                <a href="index.html">Start</a>
+                <a href="index.html" style="color: rgb(13, 102, 13);">Start</a>
                 <a href="index_menu.html">Rezept des Tages</a>
                 <a href="index_impressum.html">Impressum</a>
                 <a href="index_mail.html">Kontakt</a>
             </div>
+            <div class="hamburger" onclick="toggleNavBar()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
-
-    <!-- // REZEPT HIER EINFÜGEN // -->
     <section id="main-content" class="index">
         <section id="rezept">
             <h1>Caesar Salad</h1>
@@ -52,7 +50,6 @@
                     <span>07.02.2024</span>
                 </div>
             </div>
-
             <input type="hidden" id="previousServing" value="4">
             <div class="portion">
                 <label for="portion">Zutaten für</label>

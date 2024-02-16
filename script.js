@@ -50,3 +50,8 @@ function adjustPortions() {
     document.getElementById("previousServing").value = newValue;
   }
 }
+
+function toggleNavBar() {
+  var navBar = document.querySelector('.navBar');
+  navBar.classList.toggle('active');
+}

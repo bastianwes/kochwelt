@@ -7,6 +7,7 @@
     <title>Kochwelt</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="1rezept.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
@@ -14,18 +15,136 @@
 <body>
     <header>
         <div class="headerSection">
-            <img onclick="window.location.href='index.html'" src="img/logo.png" width="200px" style="cursor: pointer;">
+            <img onclick="window.location.href='index.html'" src="img/logo.png" style="cursor: pointer;" width="200px">
             <div class="navBar">
-                <a href="index.html">Start</a>
+                <a href="index.html" style="color: rgb(13, 102, 13);">Start</a>
                 <a href="index_menu.html">Rezept des Tages</a>
                 <a href="index_impressum.html">Impressum</a>
                 <a href="index_mail.html">Kontakt</a>
             </div>
+            <div class="hamburger" onclick="toggleNavBar()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
-
-    <!-- // REZEPT HIER EINFÜGEN // -->
-
+    <section id="main-content" class="index">
+        <section id="rezept">
+            <h1>American Pancakes</h1>
+            <div class="header-rezept">
+                <img src="img/pancake.jpg">
+            </div>
+            <div class="rezept-icon">
+                <div id="duration">
+                    <img src="img/clock-regular.svg">
+                    <span>10 min.</span>
+                </div>
+                <div id="difficulty">
+                    <img src="img/brain-solid.svg">
+                    <span>simpel</span>
+                </div>
+                <div id="post-date">
+                    <img src="img/calendar-alt-regular.svg">
+                    <span>08.02.2024</span>
+                </div>
+            </div>
+            <input type="hidden" id="previousServing" value="4">
+            <div class="portion">
+                <label for="portion">Zutaten für</label>
+                <input id="portionInput" type="number" value="4" min="1" max="30">
+                <button class="buttons" onclick="adjustPortions()">Portionen</button>
+            </div>
+            <div id="zutaten">
+                <p class="fatty">Zutaten</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat1">3 Ei(er)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>100 ml Milch</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat2">200 ml </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>Naturjoghurt</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat3">150g Mehl</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>1 Pack. Backpulver</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat4">2 EL Zucker</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>Olivenöl</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat5">Ahornsirup</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="fatty">Zubereitung</p>
+                <div id="zubereitung">
+                    <span>Die Eier werden zu einer ansprechenden, hellen Schaummasse verquirlt. Anschließend erfolgt die
+                        Vermischung von Milch und
+                        Naturjoghurt, wobei etwa 200 ml Joghurt und der verbleibende Teil Milch verwendet wird. Die
+                        Menge
+                        des Joghurts kann nach
+                        Belieben angepasst werden, abhängig von der Verfügbarkeit. Dies verleiht den Pancakes eine
+                        besonders
+                        üppige und saftige
+                        Konsistenz. Schrittweise sind Mehl, Backpulver, die Milch-Joghurt-Mischung, Salz und Zucker zu
+                        den
+                        verquirlten Eiern
+                        hinzuzufügen, während kontinuierlich gerührt wird. Gegebenenfalls sollte bei zu dickem Teig
+                        zusätzlich etwas Milch
+                        hinzugefügt werden, wobei darauf zu achten ist, dass der Teig eine gut dickflüssige Konsistenz
+                        aufweist. Die Pfanne ist
+                        auf mittlerer Stufe zu erhitzen. Für jeden Pancake etwa einen Teelöffel Öl hinzugeben und den
+                        gesamten Teig nacheinander
+                        ausbacken. Es ist wichtig, nur eine geringe Menge Öl zu verwenden und den Ausbackvorgang auf
+                        mittlerer Stufe langsam
+                        durchzuführen, um optimale Ergebnisse zu erzielen. Die fertigen Pancakes harmonieren
+                        ausgezeichnet
+                        mit Ahornsirup,
+                        Zuckerrübensirup oder einer Kombination aus Früchten und Quark.</span>
+                </div>
+            </div>
+            <div class="author">
+                <p class="fatty">Rezept erstellt von</p>
+                <div id="profil">
+                    <img class="profilimg" src="img/profile.png">
+                    <p id="author">Elias Schäfer</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <br>
+    <br>
     <footer>
         <a href="index_mail.html">Kontakt</a>
         <a href="index_impressum.html">Impressum</a>

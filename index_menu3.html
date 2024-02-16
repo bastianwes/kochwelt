@@ -7,6 +7,7 @@
     <title>Kochwelt</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="1rezept.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
@@ -14,17 +15,127 @@
 <body>
     <header>
         <div class="headerSection">
-            <img onclick="window.location.href='index.html'" src="img/logo.png" width="200px" style="cursor: pointer;">
+            <img onclick="window.location.href='index.html'" src="img/logo.png" style="cursor: pointer;" width="200px">
             <div class="navBar">
-                <a href="index.html">Start</a>
+                <a href="index.html" style="color: rgb(13, 102, 13);">Start</a>
                 <a href="index_menu.html">Rezept des Tages</a>
                 <a href="index_impressum.html">Impressum</a>
                 <a href="index_mail.html">Kontakt</a>
             </div>
+            <div class="hamburger" onclick="toggleNavBar()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
-
-    <!-- // REZEPT HIER EINFÜGEN // -->
+    <section id="main-content" class="index">
+        <section id="rezept">
+            <h1>Spaghetti Bolognese</h1>
+            <div class="header-rezept">
+                <img src="img/spaghetti-bolognese.jpg">
+            </div>
+            <div class="rezept-icon">
+                <div id="duration">
+                    <img src="img/clock-regular.svg">
+                    <span>20 min.</span>
+                </div>
+                <div id="difficulty">
+                    <img src="img/brain-solid.svg">
+                    <span>normal</span>
+                </div>
+                <div id="post-date">
+                    <img src="img/calendar-alt-regular.svg">
+                    <span>08.02.2024</span>
+                </div>
+            </div>
+            <input type="hidden" id="previousServing" value="4">
+            <div class="portion">
+                <label for="portion">Zutaten für</label>
+                <input id="portionInput" type="number" value="4" min="1" max="30">
+                <button class="buttons" onclick="adjustPortions()">Portionen</button>
+            </div>
+            <div id="zutaten">
+                <p class="fatty">Zutaten</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat1">1 Zwiebel(n)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>1 Knoblauch</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat2">1 Möhre</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>400 g stückige Tomaten</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat3">200 ml Gemüsebrühe</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>70 g Tomatenmark</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat4">1 TL Zucker</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span>1 TL Oregano</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t-left">
+                                <span class="zutat5">Salz und Pfeffer</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="fatty">Zubereitung</p>
+                <div id="zubereitung">
+                    <span>Zwiebel, Knoblauch und Möhre schälen. Anschließend in feine Würfel schneiden.
+                        Das Hackfleisch in eine Pfanne geben und langsam erhitzen. Dabei das Fleisch im eigenen Fett
+                        unter Rühren anbraten, bis
+                        es schön braun und krümelig ist. Mit Salz und Pfeffer würzen.
+                        Die vorbereiteten Zwiebeln, Knoblauch und Möhren hinzufügen und kurz mitbraten, bis sie leicht
+                        glasig sind.
+                        Die Brühe hinzugießen, um die Zutaten abzulöschen und eine aromatische Basis für die Soße zu
+                        schaffen.
+                        Tomatenmark, Oregano, die stückigen Tomaten unterrühren, um die
+                        Geschmacksrichtungen zu
+                        intensivieren.
+                        Die Hitze reduzieren und die Soße etwa 40 Minuten köcheln lassen. Dadurch haben die Aromen
+                        ausreichend Zeit, sich zu
+                        entfalten und die Soße kann eindicken.</span>
+                </div>
+            </div>
+            <div class="author">
+                <p class="fatty">Rezept erstellt von</p>
+                <div id="profil">
+                    <img class="profilimg" src="img/profile.png">
+                    <p id="author">Bastian Weschasit</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <br>
+    <br>
     <footer>
         <a href="index_mail.html">Kontakt</a>
         <a href="index_impressum.html">Impressum</a>
