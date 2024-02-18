@@ -1,3 +1,4 @@
+
 function sendMail(event) {
   event.preventDefault();
   const data = new FormData(event.target);
@@ -60,3 +61,4 @@ function toggleNavBar() {
   var navBar = document.querySelector('.navBar');
   navBar.classList.toggle('active');
 }
+
