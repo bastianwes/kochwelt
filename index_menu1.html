@@ -7,7 +7,7 @@
     <title>Kochwelt</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="1rezept.css">
+    <link rel="stylesheet" href="style_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
@@ -17,7 +17,7 @@
         <div class="headerSection">
             <img onclick="window.location.href='index.html'" src="img/logo.png" style="cursor: pointer;" width="200px">
             <div class="navBar">
-                <a href="index.html" style="color: rgb(13, 102, 13);">Start</a>
+                <a href="index.html">Start</a>
                 <a href="index_menu.html">Rezept des Tages</a>
                 <a href="index_impressum.html">Impressum</a>
                 <a href="index_mail.html">Kontakt</a>
@@ -30,124 +30,139 @@
             </div>
         </div>
     </header>
-    <section id="main-content" class="index">
-        <section id="rezept">
-            <h1>Caesar Salad</h1>
-            <div class="header-rezept">
-                <img src="img/salatimg.jpg" alt="caesar salad img">
-            </div>
-            <div class="rezept-icon">
-                <div id="duration">
-                    <img src="img/clock-regular.svg">
-                    <span>10 min.</span>
+    <div class="underline"></div>
+    <div class="mainContainer">
+        <main>
+            <section class="recipeSection">
+                <h2>Caesar Salad</h2>
+                <img src="img/salatimg.jpg" width="100%" height="400px">
+                <div class="recipeInfo">
+                    <span><i class="fa-regular fa-clock"></i>15 Min.</span>
+                    <span><i class="fa-solid fa-signal"></i>normal</span>
+                    <span><i class="fa-solid fa-calendar-days"></i>07.02.2024</span>
                 </div>
-                <div id="difficulty">
-                    <img src="img/brain-solid.svg">
-                    <span>normal</span>
+                <input type="hidden" id="previousServing" value="4">
+                <div class="portions">
+                    <label for="portion">Zutaten für</label>
+                    <input id="portionInput" type="number" value="4" min="1" max="30">
+                    <button class="buttons" onclick="adjustPortions()">Portionen</button>
                 </div>
-                <div id="post-date">
-                    <img src="img/calendar-alt-regular.svg">
-                    <span>07.02.2024</span>
+                <div class="ingredients">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="t-left">
+                                    <span>1</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Römersalat(e)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>50 g</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Parmesan,frisch gerieben</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>3 Scheibe(n)</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Toastbrot</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>1</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Knoblauchzehe(n)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>1</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Ei(er), roh</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>2</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Sardellenfilet(s) aus dem
+                                        Glas</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>2 TL</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Dijonsenf</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>4 ml</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Zitronensaft</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>150 ml</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Keimöl o. Ä. - kein Olivenöl!</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span></span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Pfeffer aus der Mühle</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-            <input type="hidden" id="previousServing" value="4">
-            <div class="portion">
-                <label for="portion">Zutaten für</label>
-                <input id="portionInput" type="number" value="4" min="1" max="30">
-                <button class="buttons" onclick="adjustPortions()">Portionen</button>
-            </div>
-            <div id="zutaten">
-                <p class="fatty">Zutaten</p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat1">1 Römersalat(e)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>50 g Parmesan,frisch gerieben</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat2">3 Scheibe/n Toastbrot</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>Öl zum Braten</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat3">1 Knoblauchzehe(n)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>1 Ei(er), roh</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat4">2 Sardellenfilet(s) aus dem
-                                    Glas</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>2TL Dijonsenf</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat5">4,09 ml Zitrone(n), Saft davon</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>150ml Keimöl o. Ä. - kein Olivenöl!</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat6">Pfeffer aus der Mühle</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="fatty">Zubereitung</p>
-                <div id="zubereitung">
-                    <span>Den Römersalat waschen, trocken schleudern und in mundgerechte Stücke schneiden. In einer
+                <h3>Zubereitung</h3>
+                <div class="preparationInfo">
+                    <span><i class="fa-regular fa-clock"></i>Arbeitszeit ca. 10 Minuten</span>
+                    <span><i class="fa-regular fa-clock"></i>Koch-/Backzeit ca. 5 Minuten</span>
+                    <span><i class="fa-regular fa-clock"></i>Gesamtzeit 15 Minuten</span>
+                    <p>
+                        Den Römersalat waschen, trocken schleudern und in mundgerechte Stücke schneiden. In einer
                         Schüssel anrichten.
-
                         Für die Sauce die gesamten Zutaten bis auf das Öl in einen hohen Becher geben und mit dem
                         Pürierstab aufschlagen, dann das Öl langsam unter ständigem Weiterschlagen einlaufen lassen,
                         bis
                         eine cremige Sauce entstanden ist.
-
                         Das Toastbrot entrinden, in kleine Würfel schneiden und in heißem Öl mit Knoblauch rundum zu
                         krossen Croûtons braten.
-
                         Die Sauce über den Salat geben, alles gut vermischen und den Salat mit reichlich geriebenem
                         Parmesankäse und den Croûtons bestreut servieren.
-
-                        Mit kross gebratenem Hähnchenfilet wird dies eine leichte Hauptspeise.</span>
+                        Mit kross gebratenem Hähnchenfilet wird dies eine leichte Hauptspeise.
+                    </p>
                 </div>
-            </div>
-            <div class="author">
-                <p class="fatty">Rezept erstellt von</p>
-                <div id="profil">
-                    <img class="profilimg" src="img/profile.png">
-                    <p id="author">Elias Schäfer</p>
+                <div class="creator">
+                    <h3>Rezept erstellt von</h3>
+                    <div id="profil">
+                        <img class="profilimg" src="img/elias.jpg">
+                        <p>Elias Schäfer</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </section>
-    <br>
-    <br>
+            </section>
+        </main>
+    </div>
     <footer>
         <a href="index_mail.html">Kontakt</a>
         <a href="index_impressum.html">Impressum</a>

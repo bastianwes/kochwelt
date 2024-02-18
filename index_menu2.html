@@ -7,7 +7,7 @@
     <title>Kochwelt</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="1rezept.css">
+    <link rel="stylesheet" href="style_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
@@ -17,7 +17,7 @@
         <div class="headerSection">
             <img onclick="window.location.href='index.html'" src="img/logo.png" style="cursor: pointer;" width="200px">
             <div class="navBar">
-                <a href="index.html" style="color: rgb(13, 102, 13);">Start</a>
+                <a href="index.html">Start</a>
                 <a href="index_menu.html">Rezept des Tages</a>
                 <a href="index_impressum.html">Impressum</a>
                 <a href="index_mail.html">Kontakt</a>
@@ -30,86 +30,100 @@
             </div>
         </div>
     </header>
-    <section id="main-content" class="index">
-        <section id="rezept">
-            <h1>American Pancakes</h1>
-            <div class="header-rezept">
-                <img src="img/pancake.jpg">
-            </div>
-            <div class="rezept-icon">
-                <div id="duration">
-                    <img src="img/clock-regular.svg">
-                    <span>10 min.</span>
+    <div class="underline"></div>
+    <div class="mainContainer">
+        <main>
+            <section class="recipeSection">
+                <h2>American Pancakes</h2>
+                <img src="img/pancake.jpg" width="100%" height="400px">
+                <div class="recipeInfo">
+                    <span><i class="fa-regular fa-clock"></i>15 Min.</span>
+                    <span><i class="fa-solid fa-signal"></i>simpel</span>
+                    <span><i class="fa-solid fa-calendar-days"></i>08.02.2024</span>
                 </div>
-                <div id="difficulty">
-                    <img src="img/brain-solid.svg">
-                    <span>simpel</span>
+                <input type="hidden" id="previousServing" value="4">
+                <div class="portions">
+                    <label for="portion">Zutaten für</label>
+                    <input id="portionInput" type="number" value="4" min="1" max="30">
+                    <button class="buttons" onclick="adjustPortions()">Portionen</button>
                 </div>
-                <div id="post-date">
-                    <img src="img/calendar-alt-regular.svg">
-                    <span>08.02.2024</span>
+                <div class="ingredients">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="t-left">
+                                    <span>3</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Ei(er)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>100 ml</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Milch</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>200 ml</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Naturjoghurt</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>150 g</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Mehl</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>1 Packung</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Backpulver</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>2 EL</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Zucker</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span></span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Olivenöl</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span></span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Ahornsirup</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-            <input type="hidden" id="previousServing" value="4">
-            <div class="portion">
-                <label for="portion">Zutaten für</label>
-                <input id="portionInput" type="number" value="4" min="1" max="30">
-                <button class="buttons" onclick="adjustPortions()">Portionen</button>
-            </div>
-            <div id="zutaten">
-                <p class="fatty">Zutaten</p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat1">3 Ei(er)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>100 ml Milch</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat2">200 ml </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>Naturjoghurt</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat3">150g Mehl</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>1 Pack. Backpulver</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat4">2 EL Zucker</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>Olivenöl</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat5">Ahornsirup</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="fatty">Zubereitung</p>
-                <div id="zubereitung">
-                    <span>Die Eier werden zu einer ansprechenden, hellen Schaummasse verquirlt. Anschließend erfolgt die
+                <h3>Zubereitung</h3>
+                <div class="preparationInfo">
+                    <span><i class="fa-regular fa-clock"></i>Arbeitszeit ca. 10 Minuten</span>
+                    <span><i class="fa-regular fa-clock"></i>Koch-/Backzeit ca. 5 Minuten</span>
+                    <span><i class="fa-regular fa-clock"></i>Gesamtzeit 15 Minuten</span>
+                    <p>
+                        Die Eier werden zu einer ansprechenden, hellen Schaummasse verquirlt. Anschließend erfolgt die
                         Vermischung von Milch und
                         Naturjoghurt, wobei etwa 200 ml Joghurt und der verbleibende Teil Milch verwendet wird. Die
                         Menge
@@ -131,20 +145,19 @@
                         durchzuführen, um optimale Ergebnisse zu erzielen. Die fertigen Pancakes harmonieren
                         ausgezeichnet
                         mit Ahornsirup,
-                        Zuckerrübensirup oder einer Kombination aus Früchten und Quark.</span>
+                        Zuckerrübensirup oder einer Kombination aus Früchten und Quark.
+                    </p>
                 </div>
-            </div>
-            <div class="author">
-                <p class="fatty">Rezept erstellt von</p>
-                <div id="profil">
-                    <img class="profilimg" src="img/profile.png">
-                    <p id="author">Elias Schäfer</p>
+                <div class="creator">
+                    <h3>Rezept erstellt von</h3>
+                    <div id="profil">
+                        <img class="profilimg" src="img/elias.jpg">
+                        <p>Elias Schäfer</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </section>
-    <br>
-    <br>
+            </section>
+        </main>
+    </div>
     <footer>
         <a href="index_mail.html">Kontakt</a>
         <a href="index_impressum.html">Impressum</a>

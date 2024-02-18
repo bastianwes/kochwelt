@@ -7,7 +7,7 @@
     <title>Kochwelt</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="1rezept.css">
+    <link rel="stylesheet" href="style_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
@@ -30,103 +30,124 @@
             </div>
         </div>
     </header>
-    <section id="main-content" class="index">
-        <section id="rezept">
-            <h1>Hokkaido-Kürbissuppe</h1>
-            <div class="header-rezept">
-                <img src="img/kürbis.jpg">
-            </div>
-            <div class="rezept-icon">
-                <div id="duration">
-                    <img src="img/clock-regular.svg">
-                    <span>20 min.</span>
+    <div class="underline"></div>
+    <div class="mainContainer">
+        <main>
+            <section class="recipeSection">
+                <h2>Hokkaido-Kürbissuppe</h2>
+                <img src="img/kürbis.jpg" width="100%" height="400px">
+                <div class="recipeInfo">
+                    <span><i class="fa-regular fa-clock"></i>35 Min.</span>
+                    <span><i class="fa-solid fa-signal"></i>normal</span>
+                    <span><i class="fa-solid fa-calendar-days"></i>07.02.2024</span>
                 </div>
-                <div id="difficulty">
-                    <img src="img/brain-solid.svg">
-                    <span>normal</span>
+                <input type="hidden" id="previousServing" value="4">
+                <div class="portions">
+                    <label for="portion">Zutaten für</label>
+                    <input id="portionInput" type="number" value="4" min="1" max="30">
+                    <button class="buttons" onclick="adjustPortions()">Portionen</button>
                 </div>
-                <div id="post-date">
-                    <img src="img/calendar-alt-regular.svg">
-                    <span>07.02.2024</span>
+                <div class="ingredients">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="t-left">
+                                    <span>800 g</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Hokkaidokürbis</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>600 g</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Möhren</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>1 Stück</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Ingwer</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>1</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Zwiebel(n)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>2 EL</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Butter</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>1 L</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Gemüsebrühe</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span>500 ml</span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Kokosmilch</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span></span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Sojasoße</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t-left">
+                                    <span></span>
+                                </td>
+                                <td class="t-right">
+                                    <span>Salz und Pfeffer</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-            <input type="hidden" id="previousServing" value="4">
-            <div class="portion">
-                <label for="portion">Zutaten für</label>
-                <input id="portionInput" type="number" value="4" min="1" max="30">
-                <button class="buttons" onclick="adjustPortions()">Portionen</button>
-            </div>
-            <div id="zutaten">
-                <p class="fatty">Zutaten</p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat1">800 g Hokkaidokürbis</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>600 g Möhren</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat2">1 Stück Ingwer</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>1 Zwiebel(n)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat3">2 EL Butter</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>1 L Gemüsebrühe</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat4">500 ml Kokosmilch</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span>Sojasoße</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="t-left">
-                                <span class="zutat5">Salz und Pfeffer</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="fatty">Zubereitung</p>
-                <div id="zubereitung">
-                    <span>Kürbis, Möhren, Ingwer und Zwiebel schälen und würfeln, in der Butter andünsten.
+                <h3>Zubereitung</h3>
+                <div class="preparationInfo">
+                    <span><i class="fa-regular fa-clock"></i>Arbeitszeit ca. 20 Minuten</span>
+                    <span><i class="fa-regular fa-clock"></i>Koch-/Backzeit ca. 15 Minuten</span>
+                    <span><i class="fa-regular fa-clock"></i>Gesamtzeit 35 Minuten</span>
+                    <p>
+                        Kürbis, Möhren, Ingwer und Zwiebel schälen und würfeln, in der Butter andünsten.
                         Mit der Brühe aufgießen und in etwa 15 - 20 Minuten weich kochen. Dann sehr fein pürieren,
                         eventuell durch ein Sieb streichen. Die Kokosmilch unterrühren, mit Salz, Pfeffer, Sojasauce und
                         Zitronensaft abschmecken und noch mal erwärmen. Mit Korianderblättchen garniert
-                        servieren.</span>
+                        servieren.
+                    </p>
                 </div>
-            </div>
-            <div class="author">
-                <p class="fatty">Rezept erstellt von</p>
-                <div id="profil">
-                    <img class="profilimg" src="img/profile.png">
-                    <p id="author">Saskia Dietrich</p>
+                <div class="creator">
+                    <h3>Rezept erstellt von</h3>
+                    <div id="profil">
+                        <img class="profilimg" src="img/profile.png">
+                        <p>Saskia Dietrich</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </section>
-    <br>
-    <br>
+            </section>
+        </main>
+    </div>
     <footer>
         <a href="index_mail.html">Kontakt</a>
         <a href="index_impressum.html">Impressum</a>

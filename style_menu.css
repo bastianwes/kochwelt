@@ -1,0 +1,146 @@
+.recipeSection img {
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.recipeSection {
+  margin: 80px 0px 80px 0px;
+}
+
+.recipeSection h3 {
+  margin: 30px 0px 10px 0px;
+}
+
+.recipeInfo {
+  margin-bottom: 50px;
+}
+
+.recipeInfo span {
+  align-items: center;
+  background: #8686854d;
+  border-radius: 8px;
+  display: inline-flex;
+  height: 16px;
+  margin: 5px 5px 5px 0px;
+  padding: 6px 8px;
+}
+
+.recipeInfo span i {
+  padding-right: 8px;
+}
+
+.portions {
+  display: flex;
+  align-items: center;
+}
+
+.portions input {
+  padding: 10px;
+  margin-right: 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 0;
+  border-right: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.buttons {
+  padding: 10px;
+  margin-right: 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 0;
+  margin-bottom: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.portions input {
+  max-width: 100px;
+  text-align: center;
+}
+
+.portions p {
+  margin-right: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+td {
+  padding: 8px;
+  text-align: left;
+  border-spacing: 0;
+}
+
+.t-left {
+  width: 3%;
+}
+
+.t-right {
+  width: 70%;
+}
+
+.preparationInfo span {
+  align-items: center;
+  background: #8686854d;
+  border-radius: 8px;
+  display: inline-flex;
+  height: 16px;
+  margin: 5px 5px 5px 0px;
+  padding: 6px 8px;
+}
+
+.preparationInfo span i {
+  padding-right: 8px;
+}
+
+.sectionDesireForNewThings {
+  background-color: rgb(248, 244, 244);
+  padding: 25px;
+}
+
+.sectionDesireForNewThings h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.allRecipes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.recipes img {
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.recipes img:hover {
+  transform: scale(1.1);
+}
+
+.recipes {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipes span {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}

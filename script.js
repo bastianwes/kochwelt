@@ -36,13 +36,11 @@ function sendMail(event) {
 function adjustPortions() {
   let previousValue = parseFloat(document.getElementById("previousServing").value);
   let newValue = parseFloat(document.getElementById("portionInput").value);
-
-  // Überprüfen, ob newValue im zulässigen Bereich liegt
   if (isNaN(newValue) || newValue < 1 || newValue > 30) {
     alert("Bitte geben Sie eine gültige Anzahl zwischen 1 und 30 ein.");
+    document.getElementById("portionInput").value = "";
     return;
   }
-
   if (previousValue && newValue) {
     let quantityElements = document.querySelectorAll('.t-left span');
     quantityElements.forEach(function (element) {
