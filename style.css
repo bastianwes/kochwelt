@@ -400,6 +400,11 @@ button:hover {
 }
 
 @media (max-width: 555px) {
+
+  .creator {
+    margin: 0 auto;
+  }
+
   .news {
     flex-direction: column;
     justify-content: center;
