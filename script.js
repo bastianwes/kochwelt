@@ -58,7 +58,7 @@ function adjustPortions() {
 }
 
 function toggleNavBar() {
-  var navBar = document.querySelector('.navBar');
+  let navBar = document.querySelector('.navBar');
   navBar.classList.toggle('active');
 }
 
